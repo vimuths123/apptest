@@ -33,5 +33,7 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
-    Route::resource('members', MemberController::class)->only(['index', 'show', 'create', 'store', 'edit', 'update', 'destroy']);
+    // Route::resource('members', MemberController::class)->only(['index', 'show', 'create', 'store', 'edit', 'update', 'destroy']);
+    Route::resource('members', MemberController::class);
+
 });
